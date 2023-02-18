@@ -7,7 +7,10 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="list-group">
-      <app-recipe-item *ngFor="let re of recipes" [recipe]="re" (recipeSelected)="onRecipeSelected(re)"></app-recipe-item>
+      <app-recipe-item
+        *ngFor="let re of recipes"
+        [recipe]="re"
+      ></app-recipe-item>
     </div>
     <app-recipe-item></app-recipe-item>
   </div>
