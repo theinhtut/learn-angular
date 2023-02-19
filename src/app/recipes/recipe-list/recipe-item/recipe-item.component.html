@@ -1,18 +1,19 @@
 <a
-        href="#"
-        class="list-group-item list-group-item-action"
-        (click)="onSelected()"
-      >
-        <div class="d-flex w-100 justify-content-between">
-          <div class="">
-            <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-            <p class="list-group-item-text">{{ recipe.description }}</p>
-          </div>
-          <img
-            [src]="recipe.imagePath"
-            alt="{{ recipe.name }}"
-            class="img-responsive"
-            style="max-height: 50px"
-          />
-        </div>
-      </a>
+  *ngIf="recipe?.name && recipe?.description"
+  class="list-group-item list-group-item-action"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+>
+  <div class="d-flex w-100 justify-content-between">
+    <div class="">
+      <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+      <p class="list-group-item-text">{{ recipe.description }}</p>
+    </div>
+    <img
+      [src]="recipe.imagePath"
+      alt="{{ recipe.name }}"
+      class="img-responsive"
+      style="max-height: 50px"
+    />
+  </div>
+</a>
