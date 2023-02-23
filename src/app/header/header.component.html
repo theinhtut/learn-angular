@@ -29,12 +29,12 @@
             aria-expanded="false"
             >Manage
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu show">
             <li>
-              <a class="dropdown-item">Save Data</a>
+              <a class="dropdown-item" (click)="onSaveData()">Save Data</a>
             </li>
             <li>
-              <a class="dropdown-item">Fetch Data</a>
+              <a class="dropdown-item" (click)="onFetchData()">Fetch Data</a>
             </li>
           </ul>
           <!-- <div class="dropdown-menu" aria-labelledby="navbarManageDD">
